@@ -1,3 +1,178 @@
 @tailwind base;
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes enterFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-87.5%);
+    transform: translateX(-87.5%);
+    -moz-transform: translateX(-87.5%);
+    -ms-transform: translateX(-87.5%);
+    -o-transform: translateX(-87.5%);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(-62.5%);
+    transform: translateX(-62.5%);
+    -moz-transform: translateX(-62.5%);
+    -ms-transform: translateX(-62.5%);
+    -o-transform: translateX(-62.5%);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-37.5%);
+    transform: translateX(-37.5%);
+    -moz-transform: translateX(-37.5%);
+    -ms-transform: translateX(-37.5%);
+    -o-transform: translateX(-37.5%);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(-12.5%);
+    transform: translateX(-12.5%);
+    -moz-transform: translateX(-12.5%);
+    -ms-transform: translateX(-12.5%);
+    -o-transform: translateX(-12.5%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+@keyframes exitFromLeft {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(-87.5%);
+    transform: translateX(-87.5%);
+    -moz-transform: translateX(-87.5%);
+    -ms-transform: translateX(-87.5%);
+    -o-transform: translateX(-87.5%);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-62.5%);
+    transform: translateX(-62.5%);
+    -moz-transform: translateX(-62.5%);
+    -ms-transform: translateX(-62.5%);
+    -o-transform: translateX(-62.5%);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(-37.5%);
+    transform: translateX(-37.5%);
+    -moz-transform: translateX(-37.5%);
+    -ms-transform: translateX(-37.5%);
+    -o-transform: translateX(-37.5%);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-12.5%);
+    transform: translateX(-12.5%);
+    -moz-transform: translateX(-12.5%);
+    -ms-transform: translateX(-12.5%);
+    -o-transform: translateX(-12.5%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+@keyframes inputShake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+    -moz-transform: translateX(-6px);
+    -ms-transform: translateX(-6px);
+    -o-transform: translateX(-6px);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    -moz-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    -o-transform: translateX(-3px);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+    -moz-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    -o-transform: translateX(2px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+.button {
+  animation: inputShake;
+  -webkit-animation: inputShake;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+.enterfromleft {
+  animation: enterFromLeft;
+  -webkit-animation: enterFromLeft;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+.exitfromleft {
+  animation: exitFromLeft;
+  -webkit-animation: exitFromLeft;
+  animation-timing-function: ease-in-out;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-screen w-screen bg-gray-50 text-[13px] sm:text-base;
+  }
+}
